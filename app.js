@@ -1,6 +1,8 @@
 const express = require('express')
 const app = express()
 
+app.set('view engine', 'ejs')
+
 const port = process.env.PORT || 3000
 
 app.listen(port, () => {
@@ -8,6 +10,7 @@ app.listen(port, () => {
 })
 
 app.get('/', (req, res) => {
-    res.send("This is a node page with automatic deploy.")
-    console.log(`${new Date()} - Página principal foi acessada.`)
+    res.render('index', {
+        msg: "This is a NodeJS application with automatic deploy"
+    })
 })
