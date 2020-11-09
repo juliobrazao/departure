@@ -8,6 +8,6 @@ app.listen(port, () => {
 })
 
 app.get('/', (req, res) => {
-    res.send("This is a node page.")
+    res.send("This is a node page with automatic deploy.")
     console.log(`${new Date()} - Página principal foi acessada.`)
 })
